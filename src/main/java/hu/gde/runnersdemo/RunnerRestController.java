@@ -82,4 +82,31 @@ public class RunnerRestController {
             this.lapTimeSeconds = lapTimeSeconds;
         }
     }
+    @PostMapping("/{id}/changeshoe")
+    public ResponseEntity<String> changeRunnerShoe(@PathVariable Long id, @RequestBody String newShoeName) {
+        RunnerEntity runner = runnerRepository.findById(id).orElse(null);
+
+        if (runner != null) {
+            // Assuming a runner can have only one shoe at a time
+            List<ShoeNameEntity> shoes = runner.getShoeNames();
+
+            if (shoes.isEmpty()) {
+                // If the runner doesn't have a shoe, create a new ShoeNameEntity
+                ShoeNameEntity newShoe = new ShoeNameEntity();
+                newShoe.setShoeName(newShoeName);
+                newShoe.setRunner(runner);
+                shoes.add(newShoe);
+            } else {
+                // If the runner already has a shoe, update the existing one
+                ShoeNameEntity currentShoe = shoes.get(0);
+                currentShoe.setShoeName(newShoeName);
+            }
+
+            runnerRepository.save(runner);
+            return ResponseEntity.ok("Runner's shoe changed successfully");
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
 }
