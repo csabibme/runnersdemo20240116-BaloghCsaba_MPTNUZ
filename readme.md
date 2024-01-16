@@ -35,17 +35,17 @@ Az utolsó commit lehetőleg egy forduló, elindítható kód legyen...
 
 ### Feladatok
 
-- Vegyetek fel egy cipoméret (shoeSize) adatot minden futóhoz. (2p)
-- Ezt töltsétek ki inicializáciokor a két futóra. (1p)
-- Vegyetek fel egy harmadik futót tetszőleges adatokkal (1p)
-- Csináljatok egy GET REST végpontot, ahol le lehet kérdezni a legnagyobb lábú futó nevét. (5p)
-- Bővítsétek a postman collectiont erre a fenti végpontra való kéréssel (3p)
-- Írjátok ki a futók átlagiramát (Pace) a http://localhost:8080/runners címen a futók listája alá (5p)
-- Vezessetek be egy új Cipő entitást ShoeName néven (azonosító, név) egy futó egy fajta cipőt használhat (oneToMany) (5p)
-- Adjatok hozzá minden futóhoz inicializációkor egy cipőtípust (3p)
-- A futó részletek http://localhost:8080/runner/{id} képernyőjén mutassuk meg a cipőtípust (3p)
-- Írjatok egy REST végpontot, ahol id alapján lehet változtatni a futó cipőtípusát (6p)
-- Bövítsétek a postman collectiont ezzel a kéréssel (1p)
+- 1Vegyetek fel egy cipoméret (shoeSize) adatot minden futóhoz. (2p)
+- 2Ezt töltsétek ki inicializáciokor a két futóra. (1p)
+- 3Vegyetek fel egy harmadik futót tetszőleges adatokkal (1p)
+- 4Csináljatok egy GET REST végpontot, ahol le lehet kérdezni a legnagyobb lábú futó nevét. (5p)
+- 5Bővítsétek a postman collectiont erre a fenti végpontra való kéréssel (3p)
+- 6Írjátok ki a futók átlagiramát (Pace) a http://localhost:8080/runners címen a futók listája alá (5p)
+- 7Vezessetek be egy új Cipő entitást ShoeName néven (azonosító, név) egy futó egy fajta cipőt használhat (oneToMany) (5p)
+- 8Adjatok hozzá minden futóhoz inicializációkor egy cipőtípust (3p)
+- 9A futó részletek http://localhost:8080/runner/{id} képernyőjén mutassuk meg a cipőtípust (3p)
+- 10Írjatok egy REST végpontot, ahol id alapján lehet változtatni a futó cipőtípusát (6p)
+- 11Bövítsétek a postman collectiont ezzel a kéréssel (1p)
 #### Részfeladatok összesen 35 pont
 + commitok minősége max 5 pont
 + clean code elvárásoknak való megfelelés max 10 pont
