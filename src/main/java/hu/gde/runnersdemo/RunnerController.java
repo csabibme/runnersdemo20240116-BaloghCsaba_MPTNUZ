@@ -20,7 +20,12 @@ public class RunnerController {
     @GetMapping("/runners")
     public String getAllRunners(Model model) {
         List<RunnerEntity> runners = runnerRepository.findAll();
+        double averagePace = runners.stream()
+                .mapToLong(RunnerEntity::getPace)
+                .average()
+                .orElse(0.0);
         model.addAttribute("runners", runners);
+        model.addAttribute("averagePace", averagePace);
         return "runners";
     }
 
