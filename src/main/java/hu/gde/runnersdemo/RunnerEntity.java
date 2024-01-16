@@ -16,6 +16,8 @@ public class RunnerEntity {
     @OneToMany(mappedBy = "runner")
     private List<LapTimeEntity> laptimes = new ArrayList<>();
 
+    @OneToMany(mappedBy = "runner", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<ShoeNameEntity> shoeNames = new ArrayList<>();
 
     public RunnerEntity() {
     }
@@ -52,5 +54,12 @@ public class RunnerEntity {
     public void setShoesize(int shoesize) {
         this.shoesize = shoesize;
     }
+
+    public List<ShoeNameEntity> getShoeNames() { return shoeNames;
+    }
+    public void setShoeNames(List<ShoeNameEntity> shoeNames) {
+        this.shoeNames = shoeNames;
+    }
+
 }
 
